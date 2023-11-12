@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxthq/ui', '@formkit/auto-animate/nuxt', '@nuxt/image'],
+  modules: ['@nuxt/ui', '@formkit/auto-animate/nuxt', '@nuxt/image'],
   // @ts-ignore
   runtimeConfig: {
     public: {

@@ -31,6 +31,7 @@ Route.post('/auth/sign-out', 'AuthController.logout').middleware(['auth'])
 
 Route.group(() => {
   Route.post('', 'PersonnagesController.create').middleware(['auth'])
+  Route.put('/:id', 'PersonnagesController.update').middleware(['auth'])
   Route.get('/:id', 'PersonnagesController.show')
   Route.get('', 'PersonnagesController.index')
 }).prefix('/api/caracters')

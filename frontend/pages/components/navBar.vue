@@ -27,7 +27,6 @@
 </template>
 <script setup lang="ts">
   import useForm from '~/utilities/form'
-
   const props = defineProps(['user'])
   const toast = useToast()
   const { $api } = useNuxtApp()

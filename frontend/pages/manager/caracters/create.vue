@@ -9,19 +9,17 @@ definePageMeta({
 const route = useRoute()
 const {$api} = useNuxtApp()
 const headers = useRequestHeaders(['cookie'])
-const {data: caracter} = await useFetch($api('/api/caracters/' + route.params.id), {headers, credentials: 'include'})
-console.log(caracter.value)
 
 const form = useForm({
-  name: caracter.value.caracter.name,
-  subtitle: caracter.value.caracter.subtitle,
-  smallDesc: caracter.value.caracter.small_desc,
-  history: caracter.value.caracter.history
+  name: '',
+  subtitle: '',
+  smallDesc: '',
+  history: ''
 }, toast)
 
 const send = async () => {
-  await form.value.put($api('/api/caracters/' + route.params.id))
-  toast.add({ title: 'Updated !', timeout: 6000 })
+  await form.value.post($api('/api/caracters/'))
+  toast.add({ title: 'Created !', timeout: 6000 })
   navigateTo({ path: '/manager/caracters' })
 }
 </script>

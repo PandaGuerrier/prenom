@@ -1,4 +1,8 @@
 @import "animate.css";
+@font-face {
+    font-family: 'Qwigley'; /*a name to be used later*/
+    src: url('Qwigley-Regular.ttf'); /*URL to font*/
+}
 
 * {
     overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -10,7 +14,13 @@
     height: 316px;
     left: 900px;
     top: 300px;
+    z-index: 0;
 
     background: #F87171;
     filter: blur(400px);
+}
+
+.title {
+    font-family: Qwigley, Poppins;
+    overflow: hidden;
 }

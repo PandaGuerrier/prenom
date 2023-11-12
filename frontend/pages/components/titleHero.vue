@@ -1,5 +1,5 @@
 <template>
-  <div class="z-0 flex justify-center items-center z-0">
+  <div class="z-0 flex justify-center items-center">
     <span class="blur2 animate-pulse"></span>
   </div>
   <div class="absolute w-full flex justify-center">
