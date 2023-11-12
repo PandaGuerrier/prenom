@@ -5,7 +5,7 @@
         <TitleHero/>
       </div>
     </div>
-    <div class="flex justify-center w-full h-full mt-64 bg-stone-900 py-5">
+    <div id="synopsis" class="flex justify-center w-full h-full mt-64 bg-stone-900 py-5">
       <div class="flex-row space-y-10">
         <div class="flex justify-center text-red-400">
           <h1 class="title text-8xl">Synopsis</h1>
@@ -25,41 +25,43 @@
 
     </div>
 
-    <div class="flex-row my-8 mt-24 w-full h-full z-50 py-4">
+    <div class="flex-row my-8 mt-24 w-full h-full z-50 py-4" id="caracts">
       <div class="flex w-full h-full justify-center items-center space-y-5">
         <div class="flex-col space-y-10">
           <div class="flex justify-center">
             <h1 class="title text-8xl text-red-400">Personnages</h1>
           </div>
           <div class="flex space-x-10">
-            <li v-for="caract in caracters.caracters" class="flex space-x-5">
-              <UCard class="border border-gray-700">
-                <template #header>
-                  <NuxtImg
-                      :src="'/caracters/' + caract.id + '.png'"
-                      :placeholder="[30,20]"
-                      class="w-[340px] h-[271px]"
-                  />
-                </template>
-                <div class="flex justify-center h-full w-full">
-                  <div class="space-y-10">
-                    <div class="text-center">
-                      <h1 class="title text-5xl">{{ caract.name }}</h1>
-                      <h2>{{ caract.subtitle }}</h2>
-                    </div>
-                    <div class="flex justify-center">
-                      {{ caract.small_desc }}
+            <MazCarousel>
+              <li v-for="caract in caracters.caracters" class="flex space-x-5">
+                <UCard class="border border-gray-700">
+                  <template #header>
+                    <NuxtImg
+                        :src="'/caracters/' + caract.id + '.png'"
+                        :placeholder="[30,20]"
+                        class="w-[340px] h-[271px]"
+                    />
+                  </template>
+                  <div class="flex justify-center h-full w-full">
+                    <div class="space-y-10">
+                      <div class="text-center">
+                        <h1 class="title text-5xl">{{ caract.name }}</h1>
+                        <h2>{{ caract.subtitle }}</h2>
+                      </div>
+                      <div class="flex justify-center">
+                        {{ caract.small_desc }}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </UCard>
-            </li>
+                </UCard>
+              </li>
+            </MazCarousel>
           </div>
         </div>
       </div>
     </div>
     <div class="flex px-52 py-4 mt-24 w-full h-full z-50 bg-gray-950 justify-center text-red-400">
-      <p>Fait par Jules avec <span class="relative animate-pulse">❤️</span></p>
+      <a href="https://pandaguerrier.fr/">Fait par Jules avec <span class="relative animate-pulse">❤️</span></a>
     </div>
   </NuxtLayout>
 </template>

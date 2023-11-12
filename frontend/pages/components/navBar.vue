@@ -8,16 +8,19 @@
                 size="lg"
                 variant="ghost"
                 label="Le prénom"
-                :ui="{ rounded: 'rounded-full' }"/>
-            <UButton
-                size="lg"
-                variant="ghost"
-                label="Personnages"
+                to="/"
                 :ui="{ rounded: 'rounded-full' }"/>
             <UButton
                 size="lg"
                 variant="ghost"
                 label="Synopsis"
+                to="#synopsis"
+                :ui="{ rounded: 'rounded-full' }"/>
+            <UButton
+                size="lg"
+                variant="ghost"
+                label="Personnages"
+                to="#caracts"
                 :ui="{ rounded: 'rounded-full' }"/>
           </div>
         </div>

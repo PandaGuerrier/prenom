@@ -27,7 +27,6 @@
   }, toast)
 
   const signUp = async () => {
-    console.log('received')
     await form.value.post($api('/auth/sign-up'))
     toast.add({ title: 'Thanks for joining!', timeout: 6000 })
     navigateTo({ path: '/' })
